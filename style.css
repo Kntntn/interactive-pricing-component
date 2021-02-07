@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+  background: url("images/bg-pattern.svg") no-repeat;
+  padding: 0 1.5rem;
+  color: hsl(225, 20%, 60%);
+}
+
+/* Text */
+
+.text {
+  text-align: center;
+  align-self: center;
+  display: grid;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
+  background: url("images/pattern-circles.svg") no-repeat center;
+  margin: 1rem;
+}
+
+.text h1 {
+  font-size: 1.3rem;
+  color: hsl(227, 35%, 25%);
+  align-self: end;
+}
+
+.text p {
+  font-size: 0.8rem;
+  align-self: start;
+  padding: 0 1rem;
+}
+
+span.avoid-break {
+  display: inline-block;
+}
+
+/* Pricing */
+
+.pricing {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  min-width: 100%;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 0.8rem 1.7rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  font-size: 12px;
+  font-weight: 800;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.pageviews {
+  font-size: 0.8rem;
+}
+
+.price {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#price {
+  font-size: 2rem;
+  font-weight: 800;
+  color: hsl(227, 35%, 25%);
+}
+
+#pageviews-para {
+  align-self: center;
+}
+
+/* Range Slider */
+
+#slider {
+  outline: none;
+  height: 8px;
+  border-radius: 1rem;
+  background: linear-gradient(
+    90deg,
+    hsl(174, 77%, 80%) 50%,
+    hsl(224, 65%, 95%) 50%
+  );
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 23px;
+  height: 24px;
+  border: 0;
+  border-radius: 2rem;
+  padding: 1.2rem;
+  box-shadow: 0 1rem 1.4rem rgba(16, 213, 194, 0.5);
+  background: url("images/icon-slider.svg") no-repeat center hsl(174, 86%, 45%);
+  cursor: pointer;
+}
+
+#slider::-moz-range-thumb {
+  -moz-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border: 0;
+  border-radius: 2rem;
+  padding: 1.2rem;
+  box-shadow: 0 1rem 1.4rem rgba(16, 213, 194, 0.5);
+  background: url("images/icon-slider.svg") no-repeat center hsl(174, 86%, 45%);
+  cursor: pointer;
+}
+
+#slider::-webkit-slider-thumb:hover {
+  transition: 1;
+  transform: scale(1.1);
+}
+
+#slider::-moz-range-thumb:hover {
+  transition: 1;
+  transform: scale(1.1);
+}
+
+#slider:active #slider:focus {
+  transition: 1;
+  transform: scale(1.1);
+}
+
+.range-slider {
+  display: grid;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+/* Billing */
+
+.billing {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 0.8rem;
+  align-items: center;
+  justify-items: center;
+  font-size: 0.7rem;
+}
+
+.yearly {
+  position: relative;
+}
+
+.yearly::after {
+  position: absolute;
+  background-color: hsl(14, 92%, 95%);
+  content: "-25%";
+  font-size: 10px;
+  color: hsl(15, 100%, 70%);
+  border-radius: 1rem;
+  padding: 3px 6px;
+  margin-left: 3px;
+  top: -2px;
+}
+
+/* benefits */
+
+.trial {
+  display: grid;
+  width: 100%;
+  gap: 1.5rem;
+  border-top: 1px solid hsl(0, 0%, 93%);
+  justify-content: center;
+  align-content: center;
+  padding-top: 1.5rem;
+}
+
+.benefits {
+  display: grid;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  gap: 0.5rem;
+}
+
+.benefits-item {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  justify-items: center;
+  gap: 0.8rem;
+}
+
+/* Button */
+
+.start {
+  border: none;
+  background-color: hsl(227, 35%, 25%);
+  color: hsl(226, 100%, 87%);
+  padding: 0.7rem 3rem;
+  border-radius: 3rem;
+  cursor: pointer;
+}
+
+.start:hover {
+  background-color: hsl(227, 35%, 32%);
+}
+
+/* Billing toggle */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 34px;
+  background-color: hsl(223, 50%, 87%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.toggle:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .toggle {
+  background-color: hsl(174, 86%, 45%);
+}
+
+input:focus + .toggle {
+  box-shadow: 0 0 1px hsl(174, 86%, 45%);
+}
+
+input:checked + .toggle:before {
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
+}
+
+/* Footer */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  align-self: flex-end;
+  padding: 1rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Media Queries */
+
+@media only screen and (min-width: 700px) and (min-height: 500px) {
+  body {
+    background-size: contain;
+  }
+
+  .text h1 {
+    font-size: 2rem;
+  }
+
+  .pricing {
+    grid-template-columns: minmax(min-content, 300px) minmax(min-content, 300px);
+    min-width: auto;
+    padding: 1rem 0;
+    grid-template-areas:
+      "pageviews price"
+      "slider    slider"
+      "billing    billing"
+      "trial     trial";
+  }
+
+  .pageviews {
+    justify-self: left;
+    font-size: 1rem;
+    grid-area: pageviews;
+    padding-left: 3rem;
+  }
+
+  .range-slider {
+    width: 100%;
+    padding: 0 3rem;
+    grid-area: slider;
+  }
+
+  .price {
+    justify-self: right;
+    grid-area: price;
+    padding-right: 3rem;
+  }
+
+  #price {
+    font-size: 2.5rem;
+  }
+
+  .billing {
+    grid-area: billing;
+  }
+
+  .yearly {
+    position: unset;
+  }
+
+  .yearly::after {
+    content: "25% discount";
+    margin-left: 1rem;
+    top: unset;
+  }
+
+  .trial {
+    grid-template-columns: repeat(2, 1fr);
+    grid-area: trial;
+    align-content: unset;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 3rem;
+  }
+
+  .benefits {
+    justify-self: left;
+    justify-items: left;
+    justify-content: left;
+    width: 100%;
+  }
+
+  .start {
+    justify-self: right;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .yearly {
+    position: relative;
+  }
+
+  .yearly::after {
+    top: -150%;
+    left: 25%;
+    margin: 0;
+  }
+}

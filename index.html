@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive pricing component</title>
+</head>
+
+<body>
+  <div class="text">
+    <h1>Simple, traffic-based pricing</h1>
+    <p>
+      <span class="avoid-break">Sign-up for our 30-day trial.</span>
+      <span class="avoid-break">No credit card required.</span>
+    </p>
+  </div>
+  <div class="pricing">
+    <p class="pageviews"><span id="pageviews"></span> PAGEVIEWS</p>
+    <div class="range-slider">
+      <input type="range" min="1" max="7" value="4" class="slider" title="pageviews" id="slider">
+    </div>
+    <div class="price">
+      <p id="price">$16.00</p>
+      <p id="interval">/ month</p>
+    </div>
+
+    <div class="billing">
+      <p>Monthly Billing</p>
+      <label class="switch">
+        <input id="toggle" title="toggle" type="checkbox">
+        <span class="toggle"></span>
+      </label>
+      <p class="yearly">Yearly Billing</p>
+    </div>
+    <div class="trial">
+      <div class="benefits">
+        <div class="benefits-item">
+          <img src="images/icon-check.svg" alt="">
+          <p>Unlimited websites</p>
+        </div>
+        <div class="benefits-item">
+          <img src="images/icon-check.svg" alt="">
+          <p>100% data ownership</p>
+        </div>
+        <div class="benefits-item">
+          <img src="images/icon-check.svg" alt="">
+          <p>Email reports</p>
+        </div>
+      </div>
+      <button class="start">Start my trial</button>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Kntntn</a>.
+  </div>
+</body>
+<script src="script.js"></script>
+
+</html>
